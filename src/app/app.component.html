@@ -1,6 +1,17 @@
 
 <div class="main">
   <app-card
+  *ngFor="let post of posts"
+  [title]="post.title"
+  [imageUrl]="post.imageUrl"
+  [username]="post.username"
+  [content]="post.content"
+ ></app-card>
+</div>
+<!-- Alttaki kod yapısından kurtulup üstteki kod yapısından güzel ve temiz bir kod yapısına geçiş yapıyoruz.-->
+
+<!-- <div class="main">
+  <app-card
   [title]="posts[0].title"
   [imageUrl]="posts[0].imageUrl"
   [username]="posts[0].username"
@@ -18,6 +29,4 @@
   [username]="posts[2].username"
   [content]="posts[2].content"
  ></app-card>
-</div>
-
-
+</div> -->
